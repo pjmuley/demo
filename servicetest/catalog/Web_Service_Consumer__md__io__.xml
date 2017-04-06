@@ -1,0 +1,168 @@
+<metadata__cache__entry>
+  <version>5.2.0.0</version>
+  <connectorName>Web_Service_Consumer</connectorName>
+  <metadataIo class="tree-map">
+    <entry>
+      <string>Get</string>
+      <map>
+        <entry>
+          <string>__default__</string>
+          <org.mule.tooling.metadata.cache.DefaultMetadataCacheEntry>
+            <input class="org.mule.common.metadata.DefaultMetaData">
+              <payload class="org.mule.tooling.metadata.api.TypeRefMetaDataModel">
+                <connectorName>Web_Service_Consumer</connectorName>
+                <typeId>Get</typeId>
+                <category>DEFAULT</category>
+              </payload>
+              <properties>
+                <entry>
+                  <org.mule.common.metadata.MetaDataPropertyScope>INBOUND</org.mule.common.metadata.MetaDataPropertyScope>
+                  <org.mule.common.metadata.MetaDataProperties>
+                    <fields/>
+                  </org.mule.common.metadata.MetaDataProperties>
+                </entry>
+                <entry>
+                  <org.mule.common.metadata.MetaDataPropertyScope>SESSION</org.mule.common.metadata.MetaDataPropertyScope>
+                  <org.mule.common.metadata.MetaDataProperties>
+                    <fields/>
+                  </org.mule.common.metadata.MetaDataProperties>
+                </entry>
+                <entry>
+                  <org.mule.common.metadata.MetaDataPropertyScope>FLOW</org.mule.common.metadata.MetaDataPropertyScope>
+                  <org.mule.common.metadata.MetaDataProperties>
+                    <fields/>
+                  </org.mule.common.metadata.MetaDataProperties>
+                </entry>
+                <entry>
+                  <org.mule.common.metadata.MetaDataPropertyScope>OUTBOUND</org.mule.common.metadata.MetaDataPropertyScope>
+                  <org.mule.common.metadata.MetaDataProperties>
+                    <fields>
+                      <org.mule.common.metadata.DefaultMetaDataField>
+                        <name>soap.request_header</name>
+                        <model class="org.mule.common.metadata.DefaultXmlMetaDataModel">
+                          <dataType>XML</dataType>
+                          <metaDataModelPropertiesManager>
+                            <properties>
+                              <org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty/>
+                            </properties>
+                          </metaDataModelPropertiesManager>
+                          <fields>
+                            <org.mule.common.metadata.DefaultMetaDataField>
+                              <name>ns0:AppID</name>
+                              <model class="org.mule.common.metadata.DefaultSimpleMetaDataModel">
+                                <dataType>STRING</dataType>
+                                <metaDataModelPropertiesManager>
+                                  <properties>
+                                    <org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty>
+                                      <typeQName>
+                                        <namespaceURI>http://www.w3.org/2001/XMLSchema</namespaceURI>
+                                        <localPart>string</localPart>
+                                        <prefix></prefix>
+                                      </typeQName>
+                                    </org.mule.common.metadata.property.xml.SchemaTypeMetaDataProperty>
+                                  </properties>
+                                </metaDataModelPropertiesManager>
+                              </model>
+                              <accessType>READ_WRITE</accessType>
+                              <metaDataFieldPropertyManager>
+                                <properties>
+                                  <org.mule.common.metadata.property.QNameMetaDataProperty>
+                                    <name>
+                                      <namespaceURI>urn:messages.ws.rightnow.com/v1_3</namespaceURI>
+                                      <localPart>AppID</localPart>
+                                      <prefix>ns0</prefix>
+                                    </name>
+                                  </org.mule.common.metadata.property.QNameMetaDataProperty>
+                                </properties>
+                              </metaDataFieldPropertyManager>
+                            </org.mule.common.metadata.DefaultMetaDataField>
+                          </fields>
+                          <rootElement>
+                            <namespaceURI>urn:messages.ws.rightnow.com/v1_3</namespaceURI>
+                            <localPart>ClientInfoHeader</localPart>
+                            <prefix>ns0</prefix>
+                          </rootElement>
+                          <schemas class="org.mule.common.metadata.StringBasedSchemaProvider">
+                            <schemas>
+                              <string>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;xs:schema xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:http=&quot;http://schemas.xmlsoap.org/wsdl/http/&quot; xmlns:rna_v1_3=&quot;urn:metadata.ws.rightnow.com/v1_3&quot; xmlns:rnb_v1_3=&quot;urn:base.ws.rightnow.com/v1_3&quot; xmlns:rnf_v1_3=&quot;urn:faults.ws.rightnow.com/v1_3&quot; xmlns:rng_v1_3=&quot;urn:generic.ws.rightnow.com/v1_3&quot; xmlns:rnm_v1_3=&quot;urn:messages.ws.rightnow.com/v1_3&quot; xmlns:rnw_v1_3=&quot;urn:wsdl.ws.rightnow.com/v1_3&quot; xmlns:soap=&quot;http://schemas.xmlsoap.org/wsdl/soap/&quot; xmlns:wsdl=&quot;http://schemas.xmlsoap.org/wsdl/&quot;&gt;
+       			&lt;xs:import namespace=&quot;urn:base.ws.rightnow.com/v1_3&quot; schemaLocation=&quot;https://veritastech--tst1.custhelp.com/cgi-bin/veritastech.cfg/services/soap?xsd=base&quot;/&gt;
+       			&lt;xs:import namespace=&quot;urn:generic.ws.rightnow.com/v1_3&quot; schemaLocation=&quot;https://veritastech--tst1.custhelp.com/cgi-bin/veritastech.cfg/services/soap?xsd=generic&quot;/&gt;
+       			&lt;xs:import namespace=&quot;urn:nullfields.ws.rightnow.com/v1_3&quot; schemaLocation=&quot;https://veritastech--tst1.custhelp.com/cgi-bin/veritastech.cfg/services/soap?xsd=nullfields&quot;/&gt;
+       			&lt;xs:import namespace=&quot;urn:objects.ws.rightnow.com/v1_3&quot; schemaLocation=&quot;https://veritastech--tst1.custhelp.com/cgi-bin/veritastech.cfg/services/soap?xsd=objects&quot;/&gt;
+       			&lt;xs:import namespace=&quot;urn:metadata.ws.rightnow.com/v1_3&quot; schemaLocation=&quot;https://veritastech--tst1.custhelp.com/cgi-bin/veritastech.cfg/services/soap?xsd=metadata&quot;/&gt;
+       			&lt;xs:import namespace=&quot;urn:faults.ws.rightnow.com/v1_3&quot; schemaLocation=&quot;https://veritastech--tst1.custhelp.com/cgi-bin/veritastech.cfg/services/soap?xsd=faults&quot;/&gt;
+       			&lt;xs:import namespace=&quot;urn:messages.ws.rightnow.com/v1_3&quot; schemaLocation=&quot;https://veritastech--tst1.custhelp.com/cgi-bin/veritastech.cfg/services/soap?xsd=messagesgeneric&quot;/&gt;
+       		&lt;/xs:schema&gt;</string>
+                            </schemas>
+                            <encoding>UTF-8</encoding>
+                          </schemas>
+                          <namespaceManager>
+                            <namespacePrefix>
+                              <entry>
+                                <string>urn:messages.ws.rightnow.com/v1_3</string>
+                                <string>ns0</string>
+                              </entry>
+                            </namespacePrefix>
+                          </namespaceManager>
+                        </model>
+                        <accessType>READ_WRITE</accessType>
+                        <metaDataFieldPropertyManager>
+                          <properties/>
+                        </metaDataFieldPropertyManager>
+                      </org.mule.common.metadata.DefaultMetaDataField>
+                    </fields>
+                  </org.mule.common.metadata.MetaDataProperties>
+                </entry>
+                <entry>
+                  <org.mule.common.metadata.MetaDataPropertyScope>RECORD</org.mule.common.metadata.MetaDataPropertyScope>
+                  <org.mule.common.metadata.MetaDataProperties>
+                    <fields/>
+                  </org.mule.common.metadata.MetaDataProperties>
+                </entry>
+              </properties>
+            </input>
+            <output class="org.mule.common.metadata.DefaultMetaData">
+              <payload class="org.mule.tooling.metadata.api.TypeRefMetaDataModel">
+                <connectorName>Web_Service_Consumer</connectorName>
+                <typeId>GetResponse</typeId>
+                <category>DEFAULT</category>
+              </payload>
+              <properties>
+                <entry>
+                  <org.mule.common.metadata.MetaDataPropertyScope>INBOUND</org.mule.common.metadata.MetaDataPropertyScope>
+                  <org.mule.common.metadata.MetaDataProperties>
+                    <fields/>
+                  </org.mule.common.metadata.MetaDataProperties>
+                </entry>
+                <entry>
+                  <org.mule.common.metadata.MetaDataPropertyScope>SESSION</org.mule.common.metadata.MetaDataPropertyScope>
+                  <org.mule.common.metadata.MetaDataProperties>
+                    <fields/>
+                  </org.mule.common.metadata.MetaDataProperties>
+                </entry>
+                <entry>
+                  <org.mule.common.metadata.MetaDataPropertyScope>FLOW</org.mule.common.metadata.MetaDataPropertyScope>
+                  <org.mule.common.metadata.MetaDataProperties>
+                    <fields/>
+                  </org.mule.common.metadata.MetaDataProperties>
+                </entry>
+                <entry>
+                  <org.mule.common.metadata.MetaDataPropertyScope>OUTBOUND</org.mule.common.metadata.MetaDataPropertyScope>
+                  <org.mule.common.metadata.MetaDataProperties>
+                    <fields/>
+                  </org.mule.common.metadata.MetaDataProperties>
+                </entry>
+                <entry>
+                  <org.mule.common.metadata.MetaDataPropertyScope>RECORD</org.mule.common.metadata.MetaDataPropertyScope>
+                  <org.mule.common.metadata.MetaDataProperties>
+                    <fields/>
+                  </org.mule.common.metadata.MetaDataProperties>
+                </entry>
+              </properties>
+            </output>
+          </org.mule.tooling.metadata.cache.DefaultMetadataCacheEntry>
+        </entry>
+      </map>
+    </entry>
+  </metadataIo>
+</metadata__cache__entry>
