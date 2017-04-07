@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<mule xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw" xmlns:ws="http://www.mulesoft.org/schema/mule/ws" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+<mule xmlns:metadata="http://www.mulesoft.org/schema/mule/metadata" xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw" xmlns:ws="http://www.mulesoft.org/schema/mule/ws" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
 	xmlns:spring="http://www.springframework.org/schema/beans" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
@@ -20,20 +20,29 @@ http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee
             <dw:set-payload><![CDATA[%dw 1.0
 %output application/xml
 %namespace ns0 urn:messages.ws.rightnow.com/v1_3
-%namespace ns1 urn:base.ws.rightnow.com/v1_3
 %namespace ns2 urn:objects.ws.rightnow.com/v1_3
 %namespace xsi http://www.w3.org/2001/XMLSchema-instance
+%namespace ns02 urn:base.ws.rightnow.com/v1_3
 ---
 {
 	ns0#Get: {
-		ns0#RNObjects @(ns2#filler:"", xsi#type:"ns2:Contact"): {
-			ns1#ID @(id: 17):""
+		ns0#RNObjects @("xmlns:ns2":"urn:objects.ws.rightnow.com/v1_3", xsi#type:"ns2:Contact"): {
+			ns02#ID @(id: 17): ""
 		},
 		ns0#ProcessingOptions: {
 			ns0#FetchAllNames: false
 		}
 	}
 }]]></dw:set-payload>
+            <dw:set-property propertyName="soap.clientInfo"><![CDATA[%dw 1.0
+%output application/xml
+%namespace ns0 urn:messages.ws.rightnow.com/v1_3
+---
+{
+	ns0#ClientInfoHeader:{
+		ns0#AppID:"Basic Get"
+	}
+}]]></dw:set-property>
         </dw:transform-message>
         <logger message="#[message.payloadAs(java.lang.String)]" level="INFO" doc:name="Logger"/>
         <ws:consumer config-ref="Web_Service_Consumer" operation="Get" doc:name="Web Service Consumer"/>
